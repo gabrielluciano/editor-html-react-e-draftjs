@@ -1,0 +1,74 @@
+.button {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid rgba(210, 210, 210, 0.4);
+  color: #999;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 1px 1px 1px 0px rgba(240, 240, 240, 0.5);
+
+  transition: background 0.2s;
+}
+
+.button .button_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button .button_icon svg {
+  color: #999;
+  font-weight: bolder;
+}
+
+.button:hover {
+  background-color: #eee;
+  color: #666;
+}
+
+.button:hover svg {
+  color: #666;
+}
+
+
+.selected_button {
+  background-color: #555;
+  color: #fff;
+}
+
+.selected_button .button_icon svg {
+  color: #fff;
+}
+
+.selected_button:hover {
+  background-color: #777;
+  color: #fff;
+}
+
+.tooltip {
+  z-index: 10;
+  position: absolute;
+  display: inline-block;
+  top: 32px;
+  padding: 5px 10px;
+  visibility: hidden;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: #888;
+  border-radius: 7px;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+.button:hover .tooltip {
+  visibility: initial;
+}

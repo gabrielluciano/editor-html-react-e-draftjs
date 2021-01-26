@@ -1,0 +1,26 @@
+.raw_container {
+  position: relative;
+  padding: 40px 16px 10px;
+  border-radius: 10px;
+
+  background-color: #333;
+
+  color: #fff;
+  font-weight: 500;
+}
+
+.raw_description {
+  position: absolute;
+  padding: 1px 6px;
+
+  top: 8px;
+  left: 8px;
+
+  color: #333;
+
+  background-color: #fff;
+  border-radius: 8px;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+}
