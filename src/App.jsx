@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { EditorState } from 'draft-js';
-
-import Editor, { convertToHtml } from './components/Editor/Editor';
+import Editor from './components/Editor/Editor';
 import decorator from './components/Editor/decorators/index';
 
 function App() {

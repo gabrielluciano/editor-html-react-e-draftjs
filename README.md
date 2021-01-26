@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Text Editor implemented using DraftJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal implementation of [DraftJS](https://draftjs.org/), a framework for create Rich Text Editor for React. Feel free to use or modify these project.
 
-## Available Scripts
+## Basic Usage
 
-In the project directory, you can run:
+First clone the repository into your machine. Then you can install the dependencies using [yarn](https://yarnpkg.com/).
 
-### `yarn start`
+```bash
+git clone https://github.com/gabrielluciano/draftjs-implementation
+cd draftjs-implementation
+yarn
+yarn start
+```
+Now you can test the editor on [localhost](http://localhost:3000).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Adding the component to your React project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The component is located on path: `./src/components/Editor`. Just copy the Editor folder to your project. The component need the following dependencies to work properly:
+* [DraftJS](https://draftjs.org/)
+* [Immutable](https://immutable-js.github.io/immutable-js/)
+* [React Icons](https://react-icons.github.io/react-icons/)
 
-### `yarn test`
+You can add this dependecies to your project running following command on your project root folder:
+```bash
+yarn add draft-js immutable react-icons
+```
+### Importing the component
+You will need the following imports do use the editor:
+```javascript
+import { EditorState } from 'draft-js';
+import Editor from './components/Editor/Editor';
+import decorator from './components/Editor/decorators/index';
+```
+### Using the Editor component
+To use the editor you will need to create a React State then pass the state variable and set state function to Editor component like the bellow example, that uses a functional React component with useState Hook:
+```javascript
+import { useState } from 'react';
+import { EditorState } from 'draft-js';
+import Editor from './components/Editor/Editor';
+import decorator from './components/Editor/decorators/index';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+function App() {
+  const [editorState, setEditorState] = useState(
+    () => EditorState.createEmpty(decorator)
+  );
 
-### `yarn build`
+  return (
+    <Editor
+      editorState={editorState}
+      setEditorState={setEditorState}
+    />
+  );
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default App;
+```
+Note that you need to pass the following argument to useState function `() => EditorState.createEmpty(decorator)`. This will create empty editor state with the custom decorator passed on createEmpty.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Converting to html
+This component also provides a function called `convertToHtml` that takes the editorState as a parameter and return an HTML string that contains the converted editor state to html.
+```javascript
+import Editor, { convertToHtml } from './components/Editor/Editor';
+// ...
+// ...
+const html = convertToHtml(editorState);
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+MIT
