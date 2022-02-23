@@ -1,7 +1,7 @@
 # Exemplo de utilização do Editor
 Este exemplo mostra a utilização do editor e como converter seu conteúdo para HTML.
 
-*Read this in English: [English](example/README.en.md).*
+*Read this in English: [English](README.en.md).*
 
 ## Instalação
 

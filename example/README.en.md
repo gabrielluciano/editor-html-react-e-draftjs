@@ -1,7 +1,7 @@
 # Editor usage example
 This example shows the usage of the Editor and how to convert its content to HTML
 
-*Leia em português: [Português Brasileiro](example/README.md).*
+*Leia em português: [Português Brasileiro](README.md).*
 
 ## Installation
 
