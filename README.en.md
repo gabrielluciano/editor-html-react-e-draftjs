@@ -4,6 +4,9 @@ This is my personal implementation of [DraftJS](https://draftjs.org/). It's a WY
 
 *Leia em português: [Português Brasileiro](README.md).*
 
+## Application Preview
+You can see and test the application in [this link](https://editor-html-react-e-draftjs.vercel.app/)!
+
 ## About DraftJS and this project
 
 DraftJS is an Open Source library created by Facebook using [ReactJS](https://reactjs.org/) that allows to create customizable text editors. However, to use and customize the Editor adding more tags or functionalities, a number of settings need to be made. This project was initially created from a need of the website [Aritmetika.com.br](https://www.aritmetika.com.br) and contains some of these basic settings.

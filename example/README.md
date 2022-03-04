@@ -3,6 +3,9 @@ Este exemplo mostra a utilização do editor e como converter seu conteúdo para
 
 *Read this in English: [English](README.en.md).*
 
+## Preview da Aplicação
+Você pode ver e testar a aplicação [neste link](https://editor-html-react-e-draftjs.vercel.app/)!
+
 ## Instalação
 
 Copie a pasta `example` para a sua máquina, acesse-a com o terminal e então utilize o comando abaixo para instalar os pacotes:

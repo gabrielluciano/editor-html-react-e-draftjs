@@ -4,6 +4,9 @@ Esta é minha implementação da biblioteca de edição de textos [DraftJS](http
 
 *Read this in English: [English](README.en.md).*
 
+## Preview da Aplicação
+Você pode ver e testar a aplicação [neste link](https://editor-html-react-e-draftjs.vercel.app/)!
+
 ## Sobre o DraftJS e este projeto
 
 O DraftJS é uma biblioteca Open Source criada pelo Facebook utilizando [ReactJS](https://pt-br.reactjs.org/) que permite criar editores de textos customizáveis. Entretanto, para utilizar e customizar o Editor adicionando mais tags ou funcionalidades, uma série de configurações precisam ser feitas. Este projeto foi criado inicialmente a partir de uma necessidade do site [Aritmetika.com.br](https://www.aritmetika.com.br) e contém algumas dessas configurações básicas.
